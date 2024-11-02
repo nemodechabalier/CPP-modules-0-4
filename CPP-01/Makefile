@@ -1,9 +1,9 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++98
-SRC = megaphone.cpp
+SRC = newZombie.cpp randomChump.cpp Zombie.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = Megaphone
+TARGET = Zombie
 
 # Colors
 GREEN  = \033[1;32m

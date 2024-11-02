@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:54:06 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/10/28 16:06:47 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:56:15 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,6 @@ Contact::Contact(void) {}
 // Méthodes set
 void Contact::setFirstName(const std::string &firstName)
 {
-	while (firstName[0] != '\0')
-		std::cout << "can't be empty" << std::endl;
 	this->firstName = firstName;
 }
 void Contact::setLastName(const std::string &Lastname)

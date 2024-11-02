@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:53:02 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/10/28 15:53:25 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/10/30 15:59:33 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,14 +32,23 @@ void PhoneBook::addContact(const Contact &newContact)
 
 void PhoneBook::displayContacts() const
 {
-	std::cout << "Index | Prénom      | Nom         | Surnom" << std::endl;
-	for (int i = 0; i < contactCount && i < 8; i++)
-	{
-		std::cout << "   " << i << "   | ";
-		std::cout << contacts[i].getFirstName().substr(0, 10) << " | ";
-		std::cout << contacts[i].getLastName().substr(0, 10) << " | ";
-		std::cout << contacts[i].getNickname().substr(0, 10) << std::endl;
-	}
+    std::cout << "  Index|      Prénom|         Nom|     Surnom" << std::endl;
+    for (int i = 0; i < contactCount && i < 8; i++)
+    {
+        std::cout << "      " << i << "| ";
+        for (int j = contacts[i].getFirstName().substr(0, 10).length(); j <= 10; j++)
+            std::cout << " ";
+        std::cout << contacts[i].getFirstName().substr(0, 10);
+        std::cout << "|";
+        for (int j = contacts[i].getLastName().substr(0, 10).length(); j <= 11; j++)
+            std::cout << " ";
+        std::cout << contacts[i].getLastName().substr(0, 10);
+        std::cout << "|";
+        for (int j = contacts[i].getNickname().substr(0, 10).length(); j <= 10; j++)
+            std::cout << " ";
+        std::cout << contacts[i].getNickname().substr(0, 10);
+        std::cout << "" << std::endl;
+    }
 }
 
 void PhoneBook::displayContact(int index) const {
