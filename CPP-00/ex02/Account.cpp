@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/30 17:35:46 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/11/02 14:01:44 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/11/02 16:46:02 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,22 +47,22 @@ void Account::_displayTimestamp(void)
 			  << "] ";
 }
 
-static int  getNbAccounts(void)
+static int   Account::getNbAccounts(void)
 {
-	return (Account::_nbAccounts);
+	return (_nbAccounts);
 }
 
-static int getTotalAmount(void)
+static int  Account::getTotalAmount(void)
 {
 	return _totalAmount;
 }
 
-static int getNbDeposits(void)
+static int  Account::getNbDeposits(void)
 {
 	return _totalNbDeposits;
 }
 
-static int getNbWithdrawals(void)
+static int  Account::getNbWithdrawals(void)
 {
 	return _totalNbWithdrawals;
 }

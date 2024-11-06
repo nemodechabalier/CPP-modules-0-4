@@ -1,7 +1,7 @@
 # Variables
 CXX = g++
 CXXFLAGS = -Wall -Wextra -std=c++98
-SRC = newZombie.cpp randomChump.cpp Zombie.cpp
+SRC = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = Zombie
 
