@@ -3,9 +3,9 @@ CXX = g++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 
 # Fichiers sources et objets
-SRC = newZombie.cpp randomChump.cpp Zombie.cpp main.cpp
+SRC = main.cpp Harl.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = program
+TARGET = HarlFilter
 
 # Règles
 all: $(TARGET)

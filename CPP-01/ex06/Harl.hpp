@@ -1,39 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   Harl.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 20:12:05 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/11/07 12:59:06 by nde-chab         ###   ########.fr       */
+/*   Created: 2024/11/07 14:58:13 by nde-chab          #+#    #+#             */
+/*   Updated: 2024/11/07 16:02:48 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#ifndef HARL_HPP
+#define HARL_HPP
 
-Weapon::Weapon(std::string type)
-{
-	std::cout << "Weapon created" << std::endl;
-	this->type = type;
-}
+#include<string>
+#include<iostream>
 
-Weapon::Weapon()
+class Harl
 {
-	std::cout << "Weapon created" << std::endl;
-}
+	
 
-Weapon::~Weapon()
-{
-	std::cout << "Weapon destroyed" << std::endl;
-}
+private:
+	void debug(void);
+	void info(void);
+	void warning(void);
+	void error(void);
 
-std::string Weapon::getType(void) const
-{
-	return (this->type);
-}
+public:
+	Harl();
+	~Harl();
+	void complain(std::string level);
+};
 
-void Weapon::setType(const std::string type)
-{
-	this->type = type;
-}
+#endif

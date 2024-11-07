@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Weapon.cpp                                         :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/06 20:12:05 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/11/07 12:59:06 by nde-chab         ###   ########.fr       */
+/*   Created: 2024/11/07 14:58:15 by nde-chab          #+#    #+#             */
+/*   Updated: 2024/11/07 16:19:05 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Weapon.hpp"
+#include "Harl.hpp"
 
-Weapon::Weapon(std::string type)
+int main(int ac, char **av)
 {
-	std::cout << "Weapon created" << std::endl;
-	this->type = type;
-}
-
-Weapon::Weapon()
-{
-	std::cout << "Weapon created" << std::endl;
-}
-
-Weapon::~Weapon()
-{
-	std::cout << "Weapon destroyed" << std::endl;
-}
-
-std::string Weapon::getType(void) const
-{
-	return (this->type);
-}
-
-void Weapon::setType(const std::string type)
-{
-	this->type = type;
+	if (ac != 2)
+	{
+		std::cout << "wrong nb of args" << std::endl;
+		return (0);
+	}
+	Harl harl;
+	harl.complain(av[1]);
+	return (1);
 }

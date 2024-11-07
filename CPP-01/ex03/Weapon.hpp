@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/06 20:03:30 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/11/06 20:16:57 by nde-chab         ###   ########.fr       */
+/*   Updated: 2024/11/07 12:59:09 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,17 @@
 
 class Weapon
 {
-	Weapon(std::string &type);
-	Weapon();
-	~Weapon();
+
 
 private:
 	std::string type;
 
 public:
+	Weapon(std::string type);
+	Weapon();
+	~Weapon();
 	std::string getType(void) const;
-	void setType(const std::string &type);
+	void setType(const std::string type);
 };
 
 #endif
