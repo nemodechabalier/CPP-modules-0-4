@@ -1,6 +1,6 @@
 # Variables
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = PhoneBook.cpp Contact.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = PhoneBook

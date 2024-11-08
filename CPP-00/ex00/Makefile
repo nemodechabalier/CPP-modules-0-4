@@ -1,6 +1,6 @@
 # Variables
 CXX = g++
-CXXFLAGS = -Wall -Wextra -std=c++98
+CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 SRC = megaphone.cpp
 OBJ = $(SRC:.cpp=.o)
 TARGET = Megaphone
