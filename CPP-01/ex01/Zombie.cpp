@@ -12,26 +12,22 @@
 
 #include "Zombie.hpp"
 
- Zombie::Zombie(const std::string &name) {
+Zombie::Zombie(const std::string& name) {
 	this->name = name;
 	std::cout << "zombie : " << name << " created" << std::endl;
- }
-Zombie::Zombie()
-{
+}
+Zombie::Zombie(){
 	std::cout << "zombie horde from created" << std::endl;
 }
 
-Zombie::~Zombie(void)
-{
+Zombie::~Zombie(void){
 	std::cout << "zombie : " << name << " destroyed" << std::endl;
 }
 
-void Zombie::announce(void)
-{
+void Zombie::announce(void){
 	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }
 
-void Zombie::setName(std::string &name)
-{
+void Zombie::setName(std::string& name){
 	this->name = name;
 }

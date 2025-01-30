@@ -44,7 +44,7 @@ void Harl::error(void)
 
 void Harl::complain(std::string level)
 {
-	void (Harl::*ptr[4])(void)= {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	void (Harl::*ptr[4])()= {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 	std::string function[4] = {"DEBUG","INFO","WARNING","ERROR"};
 	for(int i = 0; i < 4; i++)
 	{

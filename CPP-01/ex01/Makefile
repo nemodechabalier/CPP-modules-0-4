@@ -4,7 +4,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 # Fichiers sources et objets
 SRC = Zombie.cpp zombieHorde.cpp main.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = program
+TARGET = zombieHorde
 
 # Règles
 all: $(TARGET)

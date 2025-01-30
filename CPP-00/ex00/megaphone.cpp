@@ -6,7 +6,7 @@
 /*   By: nde-chab <nde-chab@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/28 13:53:09 by nde-chab          #+#    #+#             */
-/*   Updated: 2024/10/28 15:47:13 by nde-chab         ###   ########.fr       */
+/*   Updated: 2025/01/28 16:43:07 by nde-chab         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,6 @@ int main(int ac, char **av)
 				av[i][j] = toupper(av[i][j]);
 			std::cout << av[i] ;
 		}
-		std::cout << "" << std::endl;
+		std::cout << std::endl;
 	}
 }
