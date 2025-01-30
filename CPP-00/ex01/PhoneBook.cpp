@@ -54,20 +54,29 @@ void PhoneBook::displayEnd(bool eol) {
 	std::cout << "Au revoir !" << std::endl;
 }
 
+bool isPrintableString(const std::string& str) {
+	for (size_t i = 0; i < str.length(); i++)
+	{
+		if (!std::isprint(str[i]))
+			return (false);
+	}
+	return true;
+}
+
 bool PhoneBook::correct_input(std::string output, std::string* input) {
 	while (1)
 	{
 		std::cout << output << std::endl;
 		if (!std::getline(std::cin, *input))
 			return false;
-		if (input->length() > 0)
+		if (input->length() > 0 && isPrintableString(*input))
 			break;
-		std::cout << "Error can't be empty" << std::endl;
+		std::cout << "Error can't be empty or not printable" << std::endl;
 	}
 	return true;
 }
 
-bool PhoneBook::created_contact(Contact *contact) {
+bool PhoneBook::created_contact(Contact* contact) {
 
 	std::string input;
 
@@ -94,7 +103,7 @@ bool PhoneBook::created_contact(Contact *contact) {
 	return (true);
 }
 
-bool PhoneBook::ADD(PhoneBook *phone) {
+bool PhoneBook::ADD(PhoneBook* phone) {
 	Contact new_contact;
 
 	if (created_contact(&new_contact) == true) {
@@ -104,7 +113,7 @@ bool PhoneBook::ADD(PhoneBook *phone) {
 	return (false);
 }
 
-bool PhoneBook::SEARCH(PhoneBook *phone) {
+bool PhoneBook::SEARCH(PhoneBook* phone) {
 	phone->displayContacts();
 	std::cout << "Enter the index of the contact to be displayed in detail : " << std::endl;
 	int index;
