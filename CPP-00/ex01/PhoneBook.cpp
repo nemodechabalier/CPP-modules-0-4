@@ -16,22 +16,26 @@ void PhoneBook::addContact(const Contact& newContact) {
 	std::cout << "Contact ajouté avec succès !" << std::endl;
 }
 
+std::string display(std::string name) {
+	std::string dest = name;
+	if (name.length() == 10)
+		return name;
+	if (name.length() > 10)
+		return name.substr(0, 9) + ".";
+	for (int i = name.length(); i < 10; i++)
+		dest = " " + dest;
+	return dest;
+}
+
 void PhoneBook::displayContacts() const {
 	std::cout << "  Index|  First name|  Last Name|   Nickname" << std::endl;
 	for (int i = 0; i < contactCount && i < 8; i++) {
-		std::cout << "      " << i << "| ";
-		for (int j = contacts[i].getFirstName().substr(0, 10).length(); j <= 10; j++)
-			std::cout << " ";
-		std::cout << contacts[i].getFirstName().substr(0, 10);
-		std::cout << "|";
-		for (int j = contacts[i].getLastName().substr(0, 10).length(); j <= 10; j++)
-			std::cout << " ";
-		std::cout << contacts[i].getLastName().substr(0, 10);
-		std::cout << "|";
-		for (int j = contacts[i].getNickname().substr(0, 10).length(); j <= 10; j++)
-			std::cout << " ";
-		std::cout << contacts[i].getNickname().substr(0, 10);
-		std::cout << "" << std::endl;
+		std::cout << "      " << i << "|  ";
+		std::cout << display(contacts[i].getFirstName());
+		std::cout << "| ";
+		std::cout << display(contacts[i].getLastName());
+		std::cout << "| ";
+		std::cout << display(contacts[i].getNickname()) << std::endl;
 	}
 }
 
