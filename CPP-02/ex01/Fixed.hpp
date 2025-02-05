@@ -19,14 +19,14 @@ public:
     Fixed(const float nb);
     Fixed(const Fixed& other);
     ~Fixed();
-    Fixed &operator=(const Fixed& other);
-    Fixed &operator<(const Fixed& other);
+    Fixed& operator=(const Fixed& other);
 
     void setRawBits(int const raw);
     int getRawBits() const;
     float toFloat() const;
     int toInt() const;
 };
+    std::ostream& operator<<(std::ostream& out, const Fixed& other);
 
 
 
