@@ -5,7 +5,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
 # Fichiers sources et objets
 SRC = main.cpp Fixed.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = HarlFilter
+TARGET = Fixed
 
 # Règles
 all: $(TARGET)

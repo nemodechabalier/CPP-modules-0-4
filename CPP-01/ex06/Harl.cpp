@@ -49,8 +49,8 @@ void Harl::error(void)
 void Harl::complain(std::string level)
 {
 	int number = -1;
-	void (Harl::*pointer[4])(void) = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
-	std::string function[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	void (Harl:: * pointer[4])(void) = { &Harl::debug, &Harl::info, &Harl::warning, &Harl::error };
+	std::string function[4] = { "DEBUG", "INFO", "WARNING", "ERROR" };
 	for (int i = 0; i < 4; i++)
 	{
 		if (level == function[i])
@@ -58,12 +58,14 @@ void Harl::complain(std::string level)
 	}
 	switch (number)
 	{
-	case 0 :
+	case 0:
+		(this->*pointer[0])();
 	case 1:
+		(this->*pointer[1])();
 	case 2:
+		(this->*pointer[2])();
 	case 3:
-		for (int i = number; i < 4; i++)
-			(this->*pointer[i])();
+		(this->*pointer[3])();
 		break;
 	default:
 		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
