@@ -9,8 +9,8 @@ int main(void) {
     std::cout << "Point A = " << A.get_x().toFloat() << " , " << A.get_y().toFloat() << std::endl;
     std::cout << "Point B = " << B.get_x().toFloat() << " , " << B.get_y().toFloat() << std::endl;
     std::cout << "Point C = " << C.get_x().toFloat() << " , " << C.get_y().toFloat() << std::endl;
-    std::cout << "Point A = " << point1.get_x().toFloat() << " , " << point1.get_y().toFloat() << std::endl;
-    std::cout << "Point A = " << point2.get_x().toFloat() << " , " << point2.get_y().toFloat() << std::endl;
+    std::cout << "Point 1 = " << point1.get_x().toFloat() << " , " << point1.get_y().toFloat() << std::endl;
+    std::cout << "Point 2 = " << point2.get_x().toFloat() << " , " << point2.get_y().toFloat() << std::endl;
     if (bsp(A, B, C, point1))
         std::cout << "Le point 1 fait partie du triangle" << std::endl;
     else

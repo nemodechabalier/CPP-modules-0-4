@@ -10,12 +10,18 @@ Fixed::Fixed() : _nb(0) {
 }
 
 Fixed::Fixed(const int value) : _nb(value) {
+    if (value > INT_MAX / 256) {
+        std::cout << "Error overflow" << std::endl;
+    }
     _nb = value << _nbBits;
     // std::cout << "Int constructor called" << std::endl;
 }
 
 Fixed::Fixed(const float value) {
-    _nb = roundf(value * 256);
+    if (value > INT_MAX / 256) {
+        std::cout << "Error overflow" << std::endl;
+    }
+    _nb = roundf(value * (1 << _nbBits));
     // std::cout << "Float constructor called" << std::endl;
 }
 
@@ -47,7 +53,7 @@ int Fixed::getRawBits() const {
 }
 
 float Fixed::toFloat() const {
-    return _nb / 256.0f;
+    return (float(_nb) / (1 << _nbBits));
 }
 
 int Fixed::toInt() const {
@@ -76,11 +82,11 @@ Fixed Fixed::operator/(const Fixed& other) const {
 }
 
 bool Fixed::operator>(const Fixed& other) const {
-    return this->_nb > other._nb;
+    return this->getRawBits() > other.getRawBits();
 }
 
 bool Fixed::operator<(const Fixed& other) const {
-    return this->_nb < other._nb;
+    return this->getRawBits() < other.getRawBits();
 }
 
 bool Fixed::operator>=(const Fixed& other) const {
