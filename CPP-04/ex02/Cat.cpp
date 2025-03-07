@@ -17,7 +17,7 @@ Cat::~Cat() {
 
 Cat::Cat(const Cat &other): Animal(other) {
 	_Brain = new Brain(*other._Brain);
-	_type = "cat";
+	_type = other._type;
 	std::cout << "Cat: copy constructor called" << std::endl;
 }
 

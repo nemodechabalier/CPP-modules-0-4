@@ -3,24 +3,24 @@
 /* ............................................ORTHODOX CANONICAL FORM ............................................*/
 
 
-Ice::Ice() : AMateria("Ice") {
-	std::cout << "Ice: default constructor called" << std::endl;
+Ice::Ice() : AMateria("ice") {
+	//std::cout << "Ice: default constructor called" << std::endl;
 }
 
 Ice::~Ice() {
-	std::cout << "Ice: default destructor called" << std::endl;
+	//std::cout << "Ice: default destructor called" << std::endl;
 }
 
 Ice::Ice(const Ice &other) : AMateria(other) {
 	_type = other._type;
-	std::cout << "Ice: copy constructor called" << std::endl;
+	//std::cout << "Ice: copy constructor called" << std::endl;
 }
 
 Ice& Ice::operator=(const Ice &other) {
 	if (this != &other) {
 		_type = other._type;
 	}
-	std::cout << "Ice: copy assignment operator called" << std::endl;
+	//std::cout << "Ice: copy assignment operator called" << std::endl;
 	return *this;
 }
 

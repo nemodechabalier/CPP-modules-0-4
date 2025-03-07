@@ -15,7 +15,7 @@ Dog::~Dog() {
 }
 
 Dog::Dog(const Dog &other): Animal(other) {
-	_type = "Dog";
+	_type = other._type;
 	_Brain = new Brain(*other._Brain);
 	std::cout << "Dog: copy constructor called" << std::endl;
 }

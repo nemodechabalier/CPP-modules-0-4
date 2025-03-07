@@ -1,9 +1,9 @@
 # Variables
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g3
-SRC = AMateria.cpp  Character.cpp  Cure.cpp  Ice.cpp  ICharacter.cpp  IMateriaSource.cpp  main.cpp
+SRC = AMateria.cpp  Character.cpp  Cure.cpp  Ice.cpp  ICharacter.cpp  IMateriaSource.cpp  main.cpp  MateriaSource.cpp
 OBJ = $(SRC:.cpp=.o)
-TARGET = ex02
+TARGET = ex03
 
 # Colors
 GREEN  = \033[1;32m

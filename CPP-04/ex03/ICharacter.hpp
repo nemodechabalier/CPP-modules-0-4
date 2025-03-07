@@ -1,9 +1,10 @@
 #pragma once
 
 
-#include "IMateriaSource.hpp"
-#include "AMateria.hpp"
-#include "Character.hpp"
+#include <string>
+
+class AMateria;
+
 
 class ICharacter
 {

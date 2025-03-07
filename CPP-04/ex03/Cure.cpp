@@ -4,23 +4,23 @@
 
 
 Cure::Cure() : AMateria("cure") {
-	std::cout << "Cure: default constructor called" << std::endl;
+	//std::cout << "Cure: default constructor called" << std::endl;
 }
 
 Cure::~Cure() {
-	std::cout << "Cure: default destructor called" << std::endl;
+	//std::cout << "Cure: default destructor called" << std::endl;
 }
 
 Cure::Cure(const Cure &other) : AMateria(other) {
 	_type = other._type;
-	std::cout << "Cure: copy constructor called" << std::endl;
+	//std::cout << "Cure: copy constructor called" << std::endl;
 }
 
 Cure& Cure::operator=(const Cure &other) {
 	if (this != &other) {
 		_type = other._type;
 	}
-	std::cout << "Cure: copy assignment operator called" << std::endl;
+	//std::cout << "Cure: copy assignment operator called" << std::endl;
 	return *this;
 }
 

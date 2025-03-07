@@ -1,8 +1,10 @@
 #pragma once
 
+#include "AMateria.hpp"
 #include "ICharacter.hpp"
 
-class Character
+
+class Character : public ICharacter
 {
 private:
 

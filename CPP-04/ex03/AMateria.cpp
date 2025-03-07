@@ -6,16 +6,16 @@
 
 AMateria::AMateria() {
 	_type = "default";
-	std::cout << "AMateria: default constructor called" << std::endl;
+	//std::cout << "AMateria: default constructor called" << std::endl;
 }
 
 AMateria::~AMateria() {
-	std::cout << "AMateria: default destructor called" << std::endl;
+	//std::cout << "AMateria: default destructor called" << std::endl;
 }
 
 AMateria::AMateria(const AMateria &other) {
 	_type = other._type;
-	std::cout << "AMateria: copy constructor called" << std::endl;
+	//std::cout << "AMateria: copy constructor called" << std::endl;
 }
 
 AMateria& AMateria::operator=(const AMateria &other) {
@@ -23,13 +23,13 @@ AMateria& AMateria::operator=(const AMateria &other) {
 	{
 		_type = other._type;
 	}
-	std::cout << "AMateria: copy assignment operator called" << std::endl;
+	//std::cout << "AMateria: copy assignment operator called" << std::endl;
 	return *this;
 }
 
 AMateria::AMateria(const std::string &type) {
 	_type = type;
-	std::cout << "AMateria: custom constructor called" << std::endl;
+	//std::cout << "AMateria: custom constructor called" << std::endl;
 }
 
 /* ............................................ GETRER - SETTER ...................................................*/
@@ -40,3 +40,6 @@ std::string const& AMateria::getType() const {
 
 /* ............................................ FUNCTIONS .........................................................*/
 
+void AMateria::use(ICharacter& target) {
+	std::cout << "AMateria : can't use Materia in " << target.getName() << std::endl;
+}

@@ -1,7 +1,8 @@
 #pragma once
 
 #include "AMateria.hpp"
-#include "ICharacter.hpp"
+
+
 
 class IMateriaSource
 {
